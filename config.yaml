@@ -1,0 +1,4 @@
+interface:
+  name: xe10
+  ip_address: 10.11.1.1
+  prefix: 24
