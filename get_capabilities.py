@@ -20,7 +20,8 @@ if __name__ == "__main__":
 
         for model in models:
             # Use a regular expression to extract the identifier
-            match_name_space = re.search(r'(.+?)\?module', model)
+            print(model)
+            '''match_name_space = re.search(r'(.+?)\?module', model)
             match_identifier = re.search(r'module=(.+?)&', model)
             match_revision = re.search(r'revision=(.+?)(&|$)', model)
             if match_name_space and match_identifier and match_revision:
@@ -32,4 +33,4 @@ if __name__ == "__main__":
                 print( "no parameters for ", model)
 
         #schema = nconf.get_schema('zebm-cli')
-        #print(schema)
+        #print(schema)'''

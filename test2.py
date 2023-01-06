@@ -24,9 +24,9 @@ ip_address = data["interface"]["ip_address"]
 interface_name = data["interface"]["name"]
 prefix = data["interface"]["prefix"]
 old_ip_address = ip_address = data["interface"]["old_ip_address"]
-template_file = "xml_templates/write/openconfig-interfaces-copy.xml"
+template_file = "xml_templates/write/openconfig-interfaces1.xml"
 
-template_file = "output.xml"
+#template_file = "output.xml"
 
 values = {"interface_name": interface_name, "ip_address": ip_address, "prefix": prefix,"old_ip_address":old_ip_address}
 

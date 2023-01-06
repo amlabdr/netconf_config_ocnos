@@ -1,5 +1,5 @@
 interface:
   name: ce50
-  ip_address: 23.22.22.99
+  ip_address: 23.22.22.23
   prefix: '24'
   old_ip_address: 23.22.22.22

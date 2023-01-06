@@ -13,9 +13,11 @@ with manager.connect(
 
     # Retrieve the YANG models from the server
     models = conn.server_capabilities
+    print(models)
 
     # Iterate over the models
     for model in models:
+        print(model)
         # Use a regular expression to extract the identifier
         match_name_space = re.search(r'http://openconfig.net/yang/(.+?)(/|\?)', model)
         match_identifier = re.search(r'module=(.+?)&', model)

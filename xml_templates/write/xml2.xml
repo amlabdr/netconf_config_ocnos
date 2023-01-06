@@ -4,7 +4,7 @@
       <name>{interface_name}</name>
       <config>
         <name>{interface_name}</name>
- <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:ethernetCsmacd</type>
+        <type/>
         <mtu/>
         <description/>
       </config>
@@ -87,7 +87,7 @@
  <address>
  <ip>{ip_address}</ip>
  <config>
- <ip>{old_ip_address}</ip>
+ <ip>{ip_address}</ip>
  <prefix-length>{prefix}</prefix-length>
  </config>
  </address>

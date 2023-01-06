@@ -86,7 +86,8 @@ try:
         # Send the configuration to the netconf server
         # Edit the configuration on the device
         try:
-            m.edit_config(target="candidate", config=config)
+            reply = m.edit_config(target="candidate", config=config)
+            print(reply)
         except RPCError as e:
             logging.error(f"Error editing configuration: {e}")
             sys.exit(1)
