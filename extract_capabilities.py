@@ -42,4 +42,3 @@ with manager.connect(
             # Write the schema to a file
             with open(os.path.join(file_path, file_name), 'w') as f:
                 f.write(schema.text)
-
