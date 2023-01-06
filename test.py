@@ -1,26 +1,24 @@
 import ncclient, yaml, logging, sys
 from ncclient.operations import RPCError
 import xml.etree.ElementTree as ET
-
-
 from ncclient import manager
 
-
-def fill_template(template_file, parameters):
+def fill_xml_template(template_file, values):
     # Parse the XML template
     tree = ET.parse(template_file)
     root = tree.getroot()
-    print(root.findall(".//*[@param]"))
-    # Find all elements with a "param" attribute and fill in the value
-    for elem in root.findall(".//***[@param]"):
-        param_name = elem.attrib["param"]
-        if param_name in parameters:
-            elem.text = str(parameters[param_name])
-        else:
-            elem.text = ""
-    # Return the filled-in XML object
-    return ET.tostring(root, encoding="unicode")
+    print(ET.tostring(root, encoding='unicode'))
 
+
+    # Fill in the values of the parameters
+    for element in root.iter():
+        if element.text and element.text.strip().startswith('{{'):
+            key = element.text.strip()[2:-2]
+            if key in values:
+                element.text = values[key]
+            else:
+                raise ValueError(f'No value provided for parameter {key}')
+    return root
 
 # Open the YAML file
 with open("config.yaml", "r") as f:
@@ -30,16 +28,14 @@ with open("config.yaml", "r") as f:
 ip_address = data["interface"]["ip_address"]
 interface_name = data["interface"]["name"]
 prefix = data["interface"]["prefix"]
-
-
 template_file = "xml_templates/write/openconfig-interfaces-copy.xml"
-parameters = {"interface_name": interface_name, "ip_address": ip_address, "prefix": prefix}
-xml_config = fill_template(template_file, parameters)
 
-#print(xml_config)
+values = {"interface_name": interface_name, "ip_address": ip_address, "prefix": prefix}
 
-
-# Create the XML configuration template
+xml_obj = fill_xml_template(template_file, values)
+# Convert the XML object to a string and print it
+xml_str = ET.tostring(xml_obj, encoding='unicode')
+print(xml_str)
 config = """
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
 <interfaces xmlns="http://openconfig.net/yang/interfaces">
@@ -86,7 +82,8 @@ try:
         # Send the configuration to the netconf server
         # Edit the configuration on the device
         try:
-            m.edit_config(target="candidate", config=config)
+            reply = m.edit_config(target="candidate", config=config)
+            print(reply)
         except RPCError as e:
             logging.error(f"Error editing configuration: {e}")
             sys.exit(1)
@@ -95,8 +92,10 @@ try:
         try:
             #m.discard_changes()
             m.commit()
+            
         except RPCError as e:
             logging.error(f"Error committing and saving changes: {e}")
+            m.discard_changes()
             sys.exit(1)
 except Exception as e:
     logging.error(f"Error connecting to device: {e}")
