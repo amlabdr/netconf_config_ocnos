@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:435e0942-377d-4a1a-94f6-353470cb72c5"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-if-aggregate {
 
   yang-version "1";
@@ -249,5 +245,4 @@ module openconfig-if-aggregate {
 
 }
 
-  </data>
-</rpc-reply>
+  

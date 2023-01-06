@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:755aaf53-4da3-4abc-802e-bae9d5b4f6fa"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-packet-match {
 
   yang-version "1";
@@ -193,7 +189,7 @@ module openconfig-packet-match {
         range value in the top of the stack.
         The range that is used is inclusive. The match that 
         is done for a particular received pkt_label is: 
-        start-label-value &lt;= pkt_label &lt;= end-label-value. 
+        start-label-value <= pkt_label <= end-label-value. 
         The 20-bit label value in an MPLS label 
         stack as specified in RFC 3032.  
         This label value does not include the
@@ -208,7 +204,7 @@ module openconfig-packet-match {
         range value in the top of the stack. 
         The range that is used is inclusive. The match that 
         is done for a particular received pkt_label is: 
-        start-label-value &lt;= pkt_label &lt;= end-label-value. 
+        start-label-value <= pkt_label <= end-label-value. 
         The 20-bit label value in an MPLS label 
         stack as specified in RFC 3032.  
         This label value does not include the
@@ -433,5 +429,4 @@ module openconfig-packet-match {
 
 }
 
-  </data>
-</rpc-reply>
+  

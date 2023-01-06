@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:e385058d-c3c6-437c-a03b-db113ef72a6a"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-lacp {
 
   yang-version "1";
@@ -472,5 +468,4 @@ grouping aggregation-lacp-members-statistics {
 
 
 }
-  </data>
-</rpc-reply>
+  

@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:fb7a3100-a6a7-40bb-aba2-017a32c8961c"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-local-routing {
 
   yang-version "1";
@@ -443,5 +439,4 @@ module openconfig-local-routing {
 
 }
 
-  </data>
-</rpc-reply>
+  

@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:ab5bd012-283b-4a00-b625-f22ed0096b1b"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-system-terminal {
 
   yang-version "1";
@@ -252,5 +248,4 @@ module openconfig-system-terminal {
   // notification statements
 
 }
-  </data>
-</rpc-reply>
+  

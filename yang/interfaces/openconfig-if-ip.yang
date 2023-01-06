@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:7fab6f55-1fc9-400a-8773-3a50835ae8d9"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-if-ip {
 
   yang-version "1";
@@ -1332,5 +1328,4 @@ module openconfig-if-ip {
   // notification statements
 }
 
-  </data>
-</rpc-reply>
+  

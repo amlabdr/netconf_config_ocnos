@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:6026484c-694a-4334-83be-b0090aacf1e5"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-isis-lsdb-types {
 
   yang-version "1";
@@ -707,5 +703,4 @@ module openconfig-isis-lsdb-types {
 
 }
 
-  </data>
-</rpc-reply>
+  

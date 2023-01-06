@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:710ddc05-0699-4a81-9e82-261afaa1fc0f"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-vlan {
 
   yang-version "1";
@@ -212,8 +208,8 @@ module openconfig-vlan {
         "Specify VLANs, or ranges thereof, that the interface may
         carry when in trunk mode.  If not specified, all VLANs are
         allowed on the interface. Ranges are specified in the form
-        x..y, where x&lt;y - ranges are assumed to be inclusive (such
-        that the VLAN range is x &lt;= range &lt;= y.";
+        x..y, where x<y - ranges are assumed to be inclusive (such
+        that the VLAN range is x <= range <= y.";
     }
   }
 
@@ -993,5 +989,4 @@ module openconfig-vlan {
 
 }
 
-  </data>
-</rpc-reply>
+  

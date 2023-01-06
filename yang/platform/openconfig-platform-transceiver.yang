@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:1b520957-d711-4e24-bbe1-d641057c4bd9"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-platform-transceiver {
 
   yang-version "1";
@@ -55,7 +51,7 @@ module openconfig-platform-transceiver {
     If a transceiver contains a digital signal processor (DSP), such
     as with ZR+ optics, the modeling will utilize hierarchical
     components as follows:
-    PORT --&gt; TRANSCEIVER --&gt; OPTICAL_CHANNEL(s)
+    PORT --> TRANSCEIVER --> OPTICAL_CHANNEL(s)
     The signal will then traverse through a series of
     terminal-device/logical-channels as required. The first
     logical-channel connected to the OPTICAL_CHANNEL will utilize the
@@ -712,5 +708,4 @@ module openconfig-platform-transceiver {
 
 }
 
-  </data>
-</rpc-reply>
+  

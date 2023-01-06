@@ -28,7 +28,8 @@ with manager.connect(
             # Retrieve the schema of the model as an XML string
             schema = conn.get_schema(identifier = identifier).xml
             root = ET.fromstring(schema)
-            print(root)
+            # Extract the 'data' element
+            schema = root.find('./{urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring}data')
 
             # Generate the file name and path
             file_name = f'{identifier}.yang'
@@ -40,5 +41,5 @@ with manager.connect(
 
             # Write the schema to a file
             with open(os.path.join(file_path, file_name), 'w') as f:
-                f.write(schema)
+                f.write(schema.text)
 

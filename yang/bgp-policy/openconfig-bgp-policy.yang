@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:e3470475-0143-4dcf-bc76-e9da89ce0076"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-bgp-policy {
 
   yang-version "1";
@@ -1172,5 +1168,4 @@ module openconfig-bgp-policy {
   // notification statements
 }
 
-  </data>
-</rpc-reply>
+  

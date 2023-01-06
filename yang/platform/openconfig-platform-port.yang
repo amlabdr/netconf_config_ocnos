@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:d45b6790-e78b-4db9-afd1-652e66bc00c6"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-platform-port {
 
   yang-version "1";
@@ -149,7 +145,7 @@ module openconfig-platform-port {
            8 physical channels (with support for 25G NRZ, 50G PAM4 
            and 100G PAM4) in the following configuration: 
            
-           100G + 100G + 200G -&gt; 1 interface with 2 physical channels
+           100G + 100G + 200G -> 1 interface with 2 physical channels
            and 1 interface with 4 physical channels and 1 interface with
            2 physical channels. With this configuration the interface in 
            1st breakout group would use 50G PAM4 modulation, interface 
@@ -163,7 +159,7 @@ module openconfig-platform-port {
            physical channels, it would breakout a 400G OSFP port with 
            8 physical channels in the following configuration:
            
-           50G -&gt; 8 interfaces with 1 physical channel each, this would 
+           50G -> 8 interfaces with 1 physical channel each, this would 
            result in 1 entry in the breakout groups list.";
 
            list group {
@@ -233,5 +229,4 @@ module openconfig-platform-port {
 
 }
 
-  </data>
-</rpc-reply>
+  

@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:9a57b52f-ecec-4b58-86ac-71bc3c3418e5"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-segment-routing {
 
   yang-version "1";
@@ -533,7 +529,7 @@ module openconfig-segment-routing {
 
     leaf srlb {
       // Leaf is defined at
-      // /network-instances/network-instance/protocols/protocol/&lt;igp&gt;/global/
+      // /network-instances/network-instance/protocols/protocol/<igp>/global/
       // segment-routing/config
       type leafref {
         path "../../../../../../../segment-routing/srlbs/srlb/config/local-id";
@@ -791,5 +787,4 @@ module openconfig-segment-routing {
   }
 }
 
-  </data>
-</rpc-reply>
+  

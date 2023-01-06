@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:147bc000-cdbc-4807-98bd-b32976e15c27"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-isis {
 
   yang-version "1";
@@ -52,14 +48,14 @@ module openconfig-isis {
     supports the following ISIS configuration level hierarchy:
 
     ISIS
-    +-&gt; { global ISIS configuration}
-        +-&gt; levels +-&gt; { level config}
-            +-&gt; { system-level-counters }
-            +-&gt; { level link-state-database}
-        +-&gt; interface +-&gt; { interface config }
-            +-&gt; { circuit-counters }
-            +-&gt; { levels config }
-            +-&gt; { level adjacencies }";
+    +-> { global ISIS configuration}
+        +-> levels +-> { level config}
+            +-> { system-level-counters }
+            +-> { level link-state-database}
+        +-> interface +-> { interface config }
+            +-> { circuit-counters }
+            +-> { levels config }
+            +-> { level adjacencies }";
 
   oc-ext:openconfig-version "0.6.1";
 
@@ -2104,5 +2100,4 @@ module openconfig-isis {
   }
 }
 
-  </data>
-</rpc-reply>
+  

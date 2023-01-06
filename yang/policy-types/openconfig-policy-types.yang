@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:16731888-93ef-41d4-9431-ed14c2acbbc4"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-policy-types {
 
   yang-version "1";
@@ -78,12 +74,12 @@ module openconfig-policy-types {
 
   identity ATTRIBUTE_GE {
     base ATTRIBUTE_COMPARISON;
-    description "&gt;= comparison";
+    description ">= comparison";
   }
 
   identity ATTRIBUTE_LE {
     base ATTRIBUTE_COMPARISON;
-    description "&lt;= comparison";
+    description "<= comparison";
   }
 
   typedef match-set-options-type {
@@ -235,5 +231,4 @@ module openconfig-policy-types {
   }
 }
 
-  </data>
-</rpc-reply>
+  

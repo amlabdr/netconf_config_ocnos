@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:813d6444-1154-4aa0-9118-e751e4972112"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-pim-types {
 
     yang-version "1";
@@ -89,5 +85,4 @@ module openconfig-pim-types {
     }
 }
 
-  </data>
-</rpc-reply>
+  

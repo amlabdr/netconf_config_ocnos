@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:4720ce07-0e89-4be8-b05e-3dd6bb983218"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-packet-match-types {
 
   yang-version "1";
@@ -321,7 +317,7 @@ module openconfig-packet-match-types {
     }
     description
       "Port numbers may be represented as a single value,
-      an inclusive range as &lt;lower&gt;..&lt;higher&gt;, or as ANY to
+      an inclusive range as <lower>..<higher>, or as ANY to
       indicate a wildcard.";
   }
 
@@ -357,5 +353,4 @@ module openconfig-packet-match-types {
 
 }
 
-  </data>
-</rpc-reply>
+  

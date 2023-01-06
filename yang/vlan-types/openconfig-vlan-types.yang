@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:66de70f8-2f21-49b3-8aa3-8fffed442505"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-vlan-types {
 
   yang-version "1";
@@ -151,9 +147,9 @@ module openconfig-vlan-types {
     description
       "Type definition representing a range of single-tagged
       VLANs. A range is specified as x..y where x and y are
-      valid VLAN IDs (1 &lt;= vlan-id &lt;= 4094). The range is
+      valid VLAN IDs (1 <= vlan-id <= 4094). The range is
       assumed to be inclusive, such that any VLAN-ID matching
-      x &lt;= VLAN-ID &lt;= y falls within the range.";
+      x <= VLAN-ID <= y falls within the range.";
   }
 
   typedef qinq-id {
@@ -173,7 +169,7 @@ module openconfig-vlan-types {
       "Type definition representing a single double-tagged/QinQ VLAN
       identifier. The format of a QinQ VLAN-ID is x.y where X is the
       'outer' VLAN identifier, and y is the 'inner' VLAN identifier.
-      Both x and y must be valid VLAN IDs (1 &lt;= vlan-id &lt;= 4094)
+      Both x and y must be valid VLAN IDs (1 <= vlan-id <= 4094)
       with the exception that y may be equal to a wildcard (*). In
       cases where y is set to the wildcard, this represents all inner
       VLAN identifiers where the outer VLAN identifier is equal to
@@ -222,13 +218,13 @@ module openconfig-vlan-types {
       VLAN identifiers. The format of a QinQ VLAN-ID range can be
       specified in two formats. Where the range is outer VLAN IDs
       the range is specified as x..y.z. In this case outer VLAN
-      identifiers meeting the criteria x &lt;= outer-vlan-id &lt;= y are
+      identifiers meeting the criteria x <= outer-vlan-id <= y are
       accepted if and only if the inner VLAN-ID is equal to y - or
       any inner-tag if the wildcard is specified. Alternatively the
       ange can be specified as x.y..z. In this case only VLANs with an
       outer-vlan-id qual to x are accepted (x may again be the
       wildcard). Inner VLANs are accepted if they meet the inequality
-      y &lt;= inner-vlan-id &lt;= z.";
+      y <= inner-vlan-id <= z.";
   }
 
   typedef vlan-mode-type {
@@ -282,5 +278,4 @@ module openconfig-vlan-types {
 
 }
 
-  </data>
-</rpc-reply>
+  

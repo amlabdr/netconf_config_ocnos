@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:105c93d5-4c40-4f5e-b2d5-088897d3706e"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-evpn {
 
   // namespace
@@ -599,7 +595,7 @@ module openconfig-evpn {
             description
               "Enable auto route-distinguisher generation.
               When used for evpn and if not configured, the 
-              RD is auto-derived with the format &lt;ip-address&gt;:&lt;evi&gt; where
+              RD is auto-derived with the format <ip-address>:<evi> where
               ip-address is the ipv4 address associated to the
               system loopback or sub-interface.";
           reference
@@ -631,7 +627,7 @@ module openconfig-evpn {
             description
             "Enable auto route-target generation.
             When used for EVPN and if not configured, the RT is auto-derived
-            with the format &lt;asn&gt;:&lt;evi&gt; where 'asn' is the autonomous-system
+            with the format <asn>:<evi> where 'asn' is the autonomous-system
             configured in the network-instance default.
             Auto-derived route targets simplify the configuration of 
             VLAN services for EVPN, especially in VLAN-aware bundle 
@@ -655,7 +651,7 @@ module openconfig-evpn {
             description
             "Enable auto route-target generation. 
             When used for EVPN and if not configured, the RT is auto-derived 
-            with the format &lt;asn&gt;:&lt;evi&gt; where 'asn' is the autonomous-system
+            with the format <asn>:<evi> where 'asn' is the autonomous-system
             configured in the network-instance default.
             Auto-derived route targets simplify the configuration of 
             VLAN services for EVPN, especially in VLAN aware bundle 
@@ -951,5 +947,4 @@ module openconfig-evpn {
     }
   }
 }
-  </data>
-</rpc-reply>
+  

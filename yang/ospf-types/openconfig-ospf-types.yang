@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:0544f068-2f32-4149-9001-13463df70c42"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-ospf-types {
 
   yang-version "1";
@@ -328,7 +324,7 @@ module openconfig-ospf-types {
   identity BROADCAST_NETWORK {
     base "OSPF_NETWORK_TYPE";
     description
-      "An interface that supports &gt;2 attached routers which has the
+      "An interface that supports >2 attached routers which has the
       ability to address all connected systems via a single
       (broadcast) address.";
   }
@@ -336,7 +332,7 @@ module openconfig-ospf-types {
   identity NON_BROADCAST_NETWORK {
     base "OSPF_NETWORK_TYPE";
     description
-      "An interface that supports &gt;2 attached rotuers which does not
+      "An interface that supports >2 attached rotuers which does not
       have the ability to address all connected systems with a
       broadcast address.";
   }
@@ -799,5 +795,4 @@ module openconfig-ospf-types {
   }
 }
 
-  </data>
-</rpc-reply>
+  

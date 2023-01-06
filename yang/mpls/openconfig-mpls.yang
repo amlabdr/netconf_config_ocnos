@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:2cb2336c-7b8a-4ccf-aa6d-8b156f7fd463"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-mpls {
 
   yang-version "1";
@@ -59,7 +55,7 @@ module openconfig-mpls {
 
 
                               +-------+
-            +----------------&gt;| MPLS  |&lt;--------------+
+            +---------------->| MPLS  |<--------------+
             |                 +-------+               |
             |                     ^                   |
             |                     |                   |
@@ -181,7 +177,7 @@ module openconfig-mpls {
            for the admin group is an integer that represents one
            of the bit positions in the admin-group bitmask. Values
            between 0 and 31 are interpreted as the original limit
-           of 32 admin groups. Values &gt;=32 are interpreted as
+           of 32 admin groups. Values >=32 are interpreted as
            extended admin group values as per RFC7308.";
       }
 
@@ -237,7 +233,7 @@ module openconfig-mpls {
           description
             "DELTA indicates that the local
             system should flood IGP updates when a
-            change in reserved bandwidth &gt;= the specified
+            change in reserved bandwidth >= the specified
             delta occurs on the interface.";
         }
         enum THRESHOLD_CROSSED {
@@ -253,7 +249,7 @@ module openconfig-mpls {
         "The type of threshold that should be used to specify the
         values at which bandwidth is flooded. DELTA indicates that
         the local system should flood IGP updates when a change in
-        reserved bandwidth &gt;= the specified delta occurs on the
+        reserved bandwidth >= the specified delta occurs on the
         interface. Where THRESHOLD_CROSSED is specified, the local
         system should trigger an update (and hence flood) the
         reserved bandwidth when the reserved bandwidth changes such
@@ -773,5 +769,4 @@ module openconfig-mpls {
   // notification statements
 }
 
-  </data>
-</rpc-reply>
+  

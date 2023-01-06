@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rpc-reply xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"
-  message-id="urn:uuid:fde7ce89-3f65-478b-8908-202ded50bd79"
-  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <data xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+
 module openconfig-network-instance-l3 {
 
   yang-version "1";
@@ -249,5 +245,4 @@ module openconfig-network-instance-l3 {
   }
 }
 
-  </data>
-</rpc-reply>
+  
