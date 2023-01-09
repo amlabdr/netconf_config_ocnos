@@ -6,7 +6,7 @@ import re
 if __name__ == "__main__":
 
     device = {
-        "host": "10.11.200.18",
+        "host": "10.11.200.19",
         "port": 830,
         "username": "ocnos",
         "password": "ocnos",

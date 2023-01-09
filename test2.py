@@ -9,8 +9,8 @@ def fill_xml_template(template_file, values):
         xml_template = f.read()
 
     # Replace all parameters in the template with their values
-    for param, value in values.items():
-        xml_template = re.sub(f"{{{param}}}", str(value), xml_template)
+    #for param, value in values.items():
+        #xml_template = re.sub(f"{{{param}}}", str(value), xml_template)
 
     # Return the filled-in XML template
     return xml_template
@@ -24,21 +24,24 @@ ip_address = data["interface"]["ip_address"]
 interface_name = data["interface"]["name"]
 prefix = data["interface"]["prefix"]
 old_ip_address = ip_address = data["interface"]["old_ip_address"]
+interface2_name = data["interface2"]["name"]
+ip2_address = data["interface2"]["ip_address"]
 template_file = "xml_templates/write/openconfig-interfaces1.xml"
 
-#template_file = "output.xml"
+template_file = "interfaces_ip_addr_primary.xml"
 
-values = {"interface_name": interface_name, "ip_address": ip_address, "prefix": prefix,"old_ip_address":old_ip_address}
+values = {"interface_name": interface_name, "ip_address": ip_address, "prefix": prefix,"old_ip_address":old_ip_address, "interface2_name": interface2_name, "ip2_address": ip2_address}
 
 xml_obj = fill_xml_template(template_file, values)
-print(xml_obj)
+#print(xml_obj)
+
 
 
 
 try:
     # Connect to the netconf server
     with manager.connect(
-        host="10.11.200.18",
+        host="10.11.200.19",
         port=830,
         username="ocnos",
         password="ocnos",
@@ -47,7 +50,7 @@ try:
         # Send the configuration to the netconf server
         # Edit the configuration on the device
         try:
-            reply = m.edit_config(target="candidate", config=xml_obj)
+            reply = m.edit_config(target="candidate", config=xml_obj, default_operation="merge")
             print(reply)
         except Exception as e:
             print(traceback.format_exc())

@@ -1,5 +1,10 @@
 interface:
   name: ce50
-  ip_address: 23.22.22.23
+  ip_address: 133.22.22.88
   prefix: '24'
-  old_ip_address: 23.22.22.22
+  old_ip_address: 23.22.22.20
+interface2:
+  name: xe3
+  ip_address: 122.2.34.45
+  prefix: '24'
+  old_ip_address: 122.2.33.4
