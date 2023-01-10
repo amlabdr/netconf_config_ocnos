@@ -7,13 +7,17 @@
  <enabled>true</enabled>
  <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:ethernetCsmacd</type>
  </config>
- <subinterfaces operation="delete">
- <subinterface>
+ <subinterfaces operation="replace">
+ <subinterface >
  <index>0</index>
  <ipv4 xmlns="http://openconfig.net/yang/interfaces/ip">
  <addresses>
  <address>
- 
+<ip>9.8.2.4</ip>
+ <config >
+ <ip>9.8.2.4</ip>
+ <prefix-length>24</prefix-length>
+ </config>
  </address>
  </addresses>
  </ipv4>
