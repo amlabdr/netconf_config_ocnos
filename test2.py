@@ -28,12 +28,12 @@ interface2_name = data["interface2"]["name"]
 ip2_address = data["interface2"]["ip_address"]
 template_file = "xml_templates/write/openconfig-interfaces1.xml"
 
-template_file = "interfaces_ip_addr_primary.xml"
+template_file = "tst.xml"
 
 values = {"interface_name": interface_name, "ip_address": ip_address, "prefix": prefix,"old_ip_address":old_ip_address, "interface2_name": interface2_name, "ip2_address": ip2_address}
 
 xml_obj = fill_xml_template(template_file, values)
-#print(xml_obj)
+print(xml_obj)
 
 
 

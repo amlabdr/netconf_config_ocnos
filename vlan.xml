@@ -1,0 +1,42 @@
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <network-instances xmlns="http://openconfig.net/yang/network-instance">
+        <network-instance>
+            <name>1</name>
+            <config>
+                <name>1</name>
+                <type xmlns:oc-ni-types="http://openconfig.net/yang/network-instance-types">oc-ni-types:L2L3</type>
+                <enabled>true</enabled>
+            </config>
+            <vlans>
+                <vlan operation = "replace">
+                    <vlan-id>2</vlan-id>
+                    <config>
+                        <vlan-id>2</vlan-id>
+                        <name>VLAN-2</name>
+                        <status>ACTIVE</status>
+                    </config>
+                </vlan>
+            </vlans>
+        </network-instance>
+    </network-instances>
+    <network-instances xmlns="http://openconfig.net/yang/network-instance">
+        <network-instance>
+            <name>1</name>
+            <config>
+                <name>1</name>
+                <type xmlns:oc-ni-types="http://openconfig.net/yang/network-instance-types">oc-ni-types:L2L3</type>
+                <enabled>true</enabled>
+            </config>
+            <vlans>
+                <vlan operation = "replace">
+                    <vlan-id>122</vlan-id>
+                    <config>
+                        <vlan-id>122</vlan-id>
+                        <name>VLAN-122</name>
+                        <status>ACTIVE</status>
+                    </config>
+                </vlan>
+            </vlans>
+        </network-instance>
+    </network-instances>
+</config>

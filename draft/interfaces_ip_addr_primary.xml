@@ -1,31 +1,33 @@
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
 <interfaces xmlns="http://openconfig.net/yang/interfaces">
  <interface>
- <name>{interface_name}</name>
+ <name>ce50</name>
  <config>
- <name>{interface_name}</name>
+ <name>ce50</name>
  <enabled>true</enabled>
  <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:ethernetCsmacd</type>
  </config>
- <subinterfaces>
- <subinterface>
+
+
+ 
+ <subinterfaces operation="replace">
+ <subinterface >
  <index>0</index>
  <ipv4 xmlns="http://openconfig.net/yang/interfaces/ip">
  <addresses>
  <address>
- <ip>{ip_address}</ip>
- <config>
- <ip>{ip_address}</ip>
- <prefix-length>{prefix}</prefix-length>
+<ip>100.8.2.5</ip>
+ <config >
+ <ip>100.8.2.5</ip>
+ <prefix-length>24</prefix-length>
  </config>
  </address>
  </addresses>
  </ipv4>
- <config>
- <index>0</index>
- </config>
  </subinterface>
  </subinterfaces>
+
+ 
  </interface>
 </interfaces>
 </config>

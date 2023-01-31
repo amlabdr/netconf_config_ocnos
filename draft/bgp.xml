@@ -1,0 +1,26 @@
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <network-instances xmlns="http://openconfig.net/yang/network-instance">
+        <network-instance>
+            <name>default</name>
+            <protocols>
+                <protocol xmlns:oc-pol-types="http://openconfig.net/yang/policy-types">
+                    <identifier>oc-pol-types:BGP</identifier>
+                    <name>100</name>
+                    <config>
+                        <identifier>oc-pol-types:BGP</identifier>
+                        <name>100</name>
+                        <enabled>true</enabled>
+                    </config>
+                    <bgp>
+                        <global>
+                            <config>
+                                <as>100</as>
+                                <router-id>1.2.3.4</router-id>
+                            </config>
+                        </global>
+                    </bgp>
+                </protocol>
+            </protocols>
+        </network-instance>
+    </network-instances>
+</config>
